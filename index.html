@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buscadev</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div id="about">
+            <div id="icon-container"><img id="icon" src="" alt=""></div>
+            <div>
+                <h1 id="name">Name</h1>
+                <div id="search">
+                    <div id="at">@</div>
+                    <input type="text" name="username" id="username" value="henrichfsdev">
+                    <button onclick="fetchData()">Search</button>
+                </div>
+                <div id="not-found">User not found</div>
+                <ul>
+                    <li id="location">Location</li>
+                    <li><span id="followers">0</span> Followers</li>
+                    <li><span id="following">0</span> Following</li>
+                </ul>
+            </div>
+            <p id="bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores tempore eum eos. Non aspernatur
+                accusantium tenetur magnam, ullam vel doloribus rerum molestias sunt! Dicta vel dolorem ullam
+                perspiciatis. Omnis, quia?
+            </p>
+            <ul>
+                <li><a href="" id="github-url"><img src="./images/github.svg" alt="Github"></a></li>
+                <li><a href="" id="x-url"><img src="./images/twitter-x.svg" alt="X"></a></li>
+            </ul>
+        </div>
+
+        <div id="repo-container"></div>
+
+        <template id="repo-template">
+            <a class="repo-link" href="">
+                <div class="repo">
+                    <div class="repo-name">Name</div>
+                    <div class="repo-about">About</div>
+                    <ul>
+                        <li class="repo-language">Language</li>
+                        <li><span class="repo-forks"></span> Forks</li>
+                        <li><span class="repo-watchers"></span> Watchers</li>
+                    </ul>
+                </div>
+            </a>
+        </template>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+}
+
+#about {
+    height: 100vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px;
+}
+
+#icon {
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+#search {
+    display: flex;
+}
+
+#username {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#username:focus {
+    outline: none;
+}
+
+#at {
+    border: 1px solid black;
+    border-right: none;
+    padding: 10px;
+}
+
+button {
+    border: 1px solid black;
+    border-left: none;
+    background-color: transparent;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#not-found {
+    display: none;
+    color: red;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+#repo-container {
+    background-color: black;
+    min-height: 100vh;
+    width: 65vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border-left: 1px solid black;
+    align-content: baseline;
+}
+
+.repo {
+    height: 250px;
+    gap: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+}
+
+.repo-name {
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.repo-about {
+    overflow: hidden;
+}
+
+li, span {
+    font-weight: 700;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 1500px) {
+    #about {
+        padding: 50px;
+        width: 40vw;
+    }
+
+    #repo-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 60vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    #about {
+        padding: 25px;
+        width: 50vw;
+    }
+
+    #repo-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 50vw;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+
+    #icon-container {
+        text-align: center;
+    }
+
+    #about {
+        width: 100vw;
+    }
+
+    #repo-container {
+        width: 100vw;
+        border-left: none;
+        border-top: 1px solid black;
+    }
+}
